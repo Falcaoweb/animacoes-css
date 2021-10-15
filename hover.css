@@ -1,0 +1,273 @@
+
+@import './base.css';
+
+
+/* #region mudar cor evento hover*/
+.mudar-cor-evento-hover {
+  padding: 1rem 2rem;
+  background: royalblue;
+  color: white;
+
+  border: 0.25rem solid skyblue;
+  cursor: pointer;
+}
+
+/*:hover- ára realizar alguma mudança quando o mouse estiver em cima do elemento.
+Neste exemplo mudamos o background e border- color
+*/
+.mudar-cor-evento-hover:hover {
+  background: crimson;
+  border-color: salmon;
+}
+
+/* #endregion*/
+
+/* #region mudar-tamnaho-no-evento:hover*/
+.mudar-tamanho-evento-hover {
+  width: 5rem;
+  height: 3rem;
+
+  background: royalblue;
+  color: white;
+  border: 0.25rem solid skyblue;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* hover - pararealizar alguma mudança quando o mouse estiver em cima do elemento. 
+Neste exemplo mmudamos a cor do width e o heigth. */
+
+.mudar-tamanho-evento-hover:hover {
+  width: 10rem;
+  height: 6rem;
+}
+
+/* #endregion*/
+
+/*#region mudar tamanhoe cor do elemento hover*/
+.mudar-tamnaho-e-cor-evento-hover {
+  background: royalblue;
+  color: white;
+  width: 5rem;
+  height: 3rem;
+  border: 0.25rem solid skyblue;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* neste exemplo mudamos o wigth, height, background e color*/
+.mudar-tamnaho-e-cor-evento-hover:hover {
+  width: 10rem;
+  height: 6rem;
+  cursor: pointer;
+  background: saddlebrown;
+  border-color: seagreen;
+}
+
+/* #endregion*/
+
+/* #region  mudar cor no evento :hover com trnsicao*/
+/* para adicionarmos uma transicao  nos utilizamos o "transition" informando qual propriedade deve fazer transitada e quandto tempo deve levar.
+podemos informar varias propriedades  separando-as por virgula "."
+ex; trnasition: background 200ms , color : 300ms width : 200ms.*/
+.mudar-cor-evento-hover-com-transicao {
+  padding: 1rem 2rem;
+  background: goldenrod;
+  color: #222;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 0.25rem solid gold;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.mudar-cor-evento-hover-com-transicao:hover {
+  background: #222;
+  color: goldenrod;
+  border-color: #777;
+  border-radius: 1rem;
+}
+/* #endregion */
+
+/*#region  mudar tamanho no evento :hover com transicao*/
+/* neste  caso iremos realizar uma transicao com tempos diferentes entre widthe height ,
+ utilizaremos 3oo milisegundos para o width e 1segundo para o hegtht.
+
+
+*/
+.mudar-tamanho-evento-hover-com-transicao {
+  width: 6rem;
+  height: 2.5rem;
+  background: goldenrod;
+  color: #222;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 0.25rem solid gold;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: width 300ms, height 1s;
+}
+
+.mudar-tamanho-evento-hover-com-transicao:hover {
+  width: 12rem;
+  height: 5rem;
+}
+/* #endregion */
+
+/* #region  muadar tamanho cor no evento hover com transicao*/
+.mudar-tamanho-cor-no-evento-hover-com-transicao {
+  width: 6rem;
+  height: 2.5rem;
+  background: goldenrod;
+  color: #222;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 0.25rem solid gold;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+.mudar-tamanho-cor-no-evento-hover-com-transicao:hover {
+  width: 12rem;
+  height: 5rem;
+  background: green;
+  border-color: red;
+  border-radius: yellow;
+}
+
+/* #endregion */
+
+/* #region */
+.mudar-scale-event-hover {
+  padding: 1rem 2rem;
+
+  font-size: 1rem;
+  font-weight: bold;
+  background: mediumseagreen;
+  color: #fff;
+  border: 0.25rem solid rgb(3, 54, 26);
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.mudar-scale-event-hover:hover {
+  transform: scale(2);
+  /*O scale recebe ate 2 parametros sendo X e Y.
+  Quando somennte o primeiro for especificado o mesmo valor sera utilizado no segundo parametro
+
+  scale(2) = scale(2, 2) = scaleX(2) scaleY(2)
+  scale(1.5, 3) = scaleX(1.5) scaleY(3)
+  
+  */
+}
+/* #endregion */
+
+/* #region mudar posicao com transform no evento :hover */
+.mudar-posicao-evento-hover {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: mediumseagreen;
+  color: #fff;
+  border: 0.25rem solid rgb(3, 54, 26);
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+.mudar-posicao-evento-hover:hover {
+  transform: translate(2rem, 1rem);
+  /*
+  pode ser utilizados ate 3 casas, caso somente 1 tenha sido pasada  ele vai utilizar este valor par as 3 casas
+  So que a 3a casa somente e utilizada quando estiver sob efeito da perspectiva 
+  translate (2rem, 1rem) é = a translateX(3rem) translateY(1rem)
+  */
+}
+
+/* #endregion */
+
+/* #region  mudar inclinacao com transform no eleneto :hover*/
+.mudar-inclinacao-event-hover {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: mediumseagreen;
+  color: #fff;
+  border: 0.25rem solid rgb(3, 54, 26);
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+.mudar-inclinacao-event-hover:hover {
+  transform: skew(-30deg);
+  /*skew recebe ate dois parametros.
+  oprimeiro parametro X.
+  o segundo parametro Y.
+  ele so utiliza o que for especificado. Se nao declarar 2 parametors somenete o X sera utilizando.
+
+
+  pode ser utilizado como valores  com  deg.
+
+  skew (-15deg, 15deg) = skew (-15deg) skew (15deg)
+  */
+}
+/* #endregion */
+
+/* #region mudar-rotaco-evento-hover */
+.mudar-rotaco-evento-hover {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: mediumseagreen;
+  color: #fff;
+  border: 0.25rem solid rgb(3, 54, 26);
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+.mudar-rotaco-evento-hover:hover {
+  transform: rotate(45deg);
+  /*O rotate pode girar o nosso elemento em ate 3 eixos.
+  Eixo X, Y, Z (o Z somente quando trabalhamos com perspecitvas).
+  
+  O rotate somente utiliza aquilo que passamos e pode rceber ate 3 parametros seguindo a ordem X, Y, Z
+  rotate(45deg) = rotateX(45deg)
+  rotate(45deg, -30deg) = rotateX(45deg) rotateY(-30deg)
+  rotate(45deg, -30deg, 20deg) = rotateX(45deg) rotateY(-30deg) rotateZ(20deg)
+    */
+}
+/* #endregion */
+
+/* #region mudar-scale-rotacao-evento-hover*/
+.mudar-scale-rotacao-evento-hover {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: mediumseagreen;
+  color: #fff;
+  border: 0.25rem solid rgb(3, 54, 26);
+  cursor: pointer;
+  transition: all 300ms;
+}
+.mudar-scale-rotacao-evento-hover:hover {
+  transform: scale(2) rotate(45deg);
+}
+/* #endregion */
+
+/* #region mudar-inclinacao-e deslocamento com transform no-evento-hover*/
+.mudar-inclinacao-trnaslate-evento-hover {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: mediumseagreen;
+  color: #fff;
+  border: 0.25rem solid rgb(3, 54, 26);
+  cursor: pointer;
+  transition: all 300ms;
+}
+.mudar-inclinacao-trnaslate-evento-hover:hover {
+  transform: skew(30deg)  translate(2rem, 1rem);
+}
+/* #enderegion */

@@ -1,0 +1,186 @@
+@import "./base.css";
+/* #region  mudando-cor-infinitamente*/
+.mudando-cor-infinitamente {
+  width: 8rem;
+  height: 8rem;
+
+  background: crimson;
+
+  animation: mudando-cor-infinitamente 1s infinite;
+  /* animation possui varios parametros  , aqu utilizamos o nome da animacao que criamos no
+    @keyframes.
+    utilizamos o tempo de 1s  de durracao.
+    utilizamos o lop infinito.
+
+     animation: mudando-cor-infinitamente 1s infinite;
+    =
+    animatiton-name:mudando-cor-infintamente;
+    animation-duration:1s;
+    animation-interation-count:infinite;
+    */
+}
+/* @keyframes para cirar uma animacao.
+o que vier depois é o nome da animação*/
+
+@keyframes mudando-cor-infinitamente {
+  /*  colocando os css na nossa timeline da animação começando co 0% e indo ate 100%.
+        nao tem limites de posntos(0% e 100%) que podemos cirar alterações no nosso elemento
+        
+        */
+  0% {
+    background: crimson;
+  }
+  70% {
+    background: darkgreen;
+    border-radius: 50%;
+  }
+  100% {
+    background: crimson;
+  }
+}
+
+/* #endregion */
+
+/* #region animacao posicao do elemento infinitamente */
+.mudando-posicao-infinitamente {
+  width: 3rem;
+  height: 3rem;
+
+  background: royalblue;
+  animation: mudando-posicao-infinitamente 3s ease-in-out infinite;
+}
+
+@keyframes mudando-posicao-infinitamente {
+  0%,
+  100% {
+    transform: translate(-5rem, -5rem);
+  }
+
+  15%,
+  85% {
+    transform: translate(5rem, -5rem);
+  }
+
+  30%,
+  70% {
+    transform: translate(5rem, 5rem);
+  }
+
+  40%,
+  60% {
+    transform: translate(-5rem, 5rem);
+  }
+
+  50% {
+    transform: translate(0);
+  }
+}
+
+/* #endregion */
+/* #region mudando-cor- tamanho infinitamente */
+.mudando-cor-tamanho-rotacao-infinitamente {
+  width: 3rem;
+  height: 3rem;
+  background: royalblue;
+  animation: cor-tamanho-rotacao 2s infinite;
+  /*anmation*/
+}
+@keyframes cor-tamanho-rotacao {
+  /*pelo menos tres estagios para mudar cor e rotacao*/
+  0%,
+  100% {
+    transform: scale(2) rotate(45deg);
+    background: red;
+    border-radius: 2rem;
+  }
+
+  25%,
+  75% {
+    transform: scale(4) rotate(90deg);
+    background: green;
+    border-radius: 3rem;
+  }
+
+  85% {
+    transform: scale(6) rotate(180deg);
+    background: peru;
+    border-radius: 4rem;
+  }
+}
+/* #endregion */
+
+/* #region  animacoes infinitas*/
+
+/* #region mudar-rotacao-elemento-evento-hover */
+.mudar-rotacao-elemento {
+  width: 3rem;
+  height: 3rem;
+
+  background: royalblue;
+  animation: rotacao-elemento 1s ease-in-out 500ms forwards;
+  /* animation:animation: rotacao-elemento 1s ease-in-out 500ms forwards=
+  aniamtion-name:rotacoa-elemento;
+  animation-duration: 1s;
+  animation-timing-function:ease-in-out;
+  animation-delay:500ms
+  animation-fill-mode: forwards;
+  */
+
+  /* rotacao-elemento 1s ease-in-out 500ms forwards; */
+  /* forwards- é para  elemento ficar da forma  quee stava ao final da  animacao  */
+}
+@keyframes rotacao-elemento {
+  from {
+    transform: rotate(0) translateX(0);
+  }
+  to {
+    transform: rotate(45deg) translate(5rem);
+  }
+}
+/* #endregion */
+/* #region rotacionar-pulsar-elemento */
+.rotacionar-pulsar-elemento {
+  width: 3rem;
+  height: 3rem;
+  background: crimson;
+
+  animation: rotacionar-pulsar 1s ease-in-out 1s backwards;
+}
+@keyframes rotacionar-pulsar {
+  0% {
+    transform: scale(0.95) rotate(-15deg);
+  }
+  60%,
+  100% {
+    transform: scale(1.35) rotate(45deg);
+  }
+  70% {
+    transform: scale(1) rotate(0);
+  }
+}
+/* #endregion */
+
+/* #region */
+.mudar-deslocamento-cor-tamanho {
+  width: 3rem;
+  height: 3rem;
+
+  background: crimson;
+
+  animation: deslocamento-cor-tamanho 1s ease-in-out  1s both;
+}
+@keyframes deslocamento-cor-tamanho {
+  from {
+    width: 6rem;
+    height: 4rem;
+    background: darkblue;
+    transform: translate(-5rem, -5rem);
+  }
+  to {
+    width: 8rem;
+    height:6rem;
+    transform:translate(5rem, 5rem);
+    background:darkgoldenrod;
+  }
+}
+/* #endregion */
